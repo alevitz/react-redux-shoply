@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { v4 as uuid } from 'uuid';
 import './ItemList.css';
 import Item from './Item';
+import { Link } from "react-router-dom";
 
 function ItemList() {
   const shoppingCart = useSelector(st => st.shoppingCart);
@@ -14,9 +15,11 @@ function ItemList() {
 
   return (
     <div className="ItemList">
+      <Link to={`/cart`}>
       <div data-testid="cart-num-items" className="cart-num-items" >
         Items: {shoppingCart.length}
       </div>
+      </Link>
       <ul>
         {
           inventory.map(item => (
