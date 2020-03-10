@@ -5,7 +5,7 @@ function rootReducer(state = INITIAL_STATE, action) {
   switch (action.type) {
 
     case "ADD":
-      return { ...state, shoppingCart: [...state.shoppingCart, { item: action.payload }] };
+      return { ...state, shoppingCart: [...state.shoppingCart, { item: action.payload }], inventory: [...state.inventory] };
 
     case "REMOVE":
       const id = action.payload.id;

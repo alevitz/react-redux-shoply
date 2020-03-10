@@ -11,13 +11,16 @@ function ItemList() {
   const inventory = useSelector(st => st.inventory);
   const dispatch = useDispatch();
 
+  console.log("inventory", inventory)
+  console.log("shoppingcart", shoppingCart)
   const add = (item) => dispatch({ type: "ADD", payload: item })
   const remove = (item) => dispatch({ type: "REMOVE", payload: item })
 
-  for (let item in data.products) {
-    data.products[item].id = item;
-    inventory.push(data.products[item])
-
+  if (inventory.length === 0) {
+    for (let item in data.products) {
+      data.products[item].id = item;
+      inventory.push(data.products[item])
+    }
   }
 
   return (
