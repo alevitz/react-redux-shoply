@@ -12,8 +12,8 @@ function ItemList() {
   const inventory = useSelector(st => st.inventory);
   const dispatch = useDispatch();
 
-  console.log("inventory", inventory)
-  console.log("shoppingcart", shoppingCart)
+  // console.log("inventory", inventory)
+  // console.log("shoppingcart", shoppingCart)
   const add = (item) => dispatch({ type: "ADD", payload: item })
   const remove = (item) => dispatch({ type: "REMOVE", payload: item })
 
