@@ -1,11 +1,12 @@
 import React from 'react';
 import './Item.css';
+import { Link } from "react-router-dom";
 
 function Item({item, add, remove}) {
 
   return (
     <div>
-      <div className = "item-name">{item.name.toUpperCase()}</div>
+      <Link to={`/products/${item.name}`}><div className = "item-name">{item.name.toUpperCase()}</div></Link>
       <div>${item.price}</div>
       <div className = "item-desc">{item.description}</div>
       <div className = "item-img"><img src={item.image_url} alt="item" height="200"/></div>
