@@ -25,7 +25,7 @@ function ItemList() {
 
   return (
     <div className="ItemList">
-      <div>Items: {shoppingCart.length}</div>
+      <div data-testid="cart-num-items">Items: {shoppingCart.length}</div>
       <ul>
         {
           inventory.map(item => (
