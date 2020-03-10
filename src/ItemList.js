@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import data from './data.json';
 import { v4 as uuid } from 'uuid';
+import './ItemList.css';
 
 
 import Item from './Item';
@@ -25,11 +26,11 @@ function ItemList() {
 
   return (
     <div className="ItemList">
-      <div data-testid="cart-num-items">Items: {shoppingCart.length}</div>
+      <div data-testid="cart-num-items" className = "cart-num-items" >Items: {shoppingCart.length}</div>
       <ul>
         {
           inventory.map(item => (
-            <li key={uuid()}>
+            <li className = "item" key={uuid()}>
               <Item item={item} add={() => add(item)} remove={() => remove(item)} />
             </li>
           ))

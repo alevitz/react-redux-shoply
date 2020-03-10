@@ -5,7 +5,8 @@ import reducers from './rootReducer';
   test('reducers', () => {
     let state;
     state = reducers({shoppingCart:[]}, {type:'ADD',payload:{name:'tv',price:219.99,description:'A beautiful, big-screen TV. Because hey, Netflix isn\'t going to watch itself.',image_url:'https://images.samsung.com/is/image/samsung/latin_en-hd-j4300ah-un32j4300ahxpa-001-front-indigo-blue',id:'47314fa1-ae56-4eae-80be-af6691145951'}});
-    
+   
+    // Might want to test that reducers were pure
     expect(state).toEqual({shoppingCart:[{item:{name:'tv',price:219.99,description:'A beautiful, big-screen TV. Because hey, Netflix isn\'t going to watch itself.',image_url:'https://images.samsung.com/is/image/samsung/latin_en-hd-j4300ah-un32j4300ahxpa-001-front-indigo-blue',id:'47314fa1-ae56-4eae-80be-af6691145951'}}]});
   });
 

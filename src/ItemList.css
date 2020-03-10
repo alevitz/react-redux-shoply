@@ -1,0 +1,15 @@
+
+
+.item {
+  display: inline-block;
+  width: 400px; 
+  height: 400px;
+  border-color: black;
+  border-style: solid;
+  margin: 20px;
+}
+
+.cart-num-items {
+  margin: 30px;
+  font-weight: bold;
+}
