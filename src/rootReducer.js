@@ -1,5 +1,11 @@
+import data from './data.json';
 
 const INITIAL_STATE = { shoppingCart: [], inventory: [] };
+
+for (let item in data.products) {
+  data.products[item].id = item;
+  INITIAL_STATE.inventory.push(data.products[item])
+}
 
 function rootReducer(state = INITIAL_STATE, action) {
   switch (action.type) {
